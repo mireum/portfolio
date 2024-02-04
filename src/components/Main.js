@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { ReactTyped } from "react-typed";
+import { useFadeIn } from '../func/Func';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -39,7 +40,11 @@ const MainContainer = styled.div`
     margin-top: 60px;
     /* border-top: 2px dashed #c73232; */
     padding: 30px;
-
+    opacity: 0;
+    transition: .5s;
+  }
+  p:on {
+    opacity: 1;
   }
 `;
 
@@ -47,17 +52,28 @@ function Main() {
 
   const TypedText = () => {
     return (
-      <>
-        <ReactTyped 
-          strings={['Developer 최지우의 포트폴리오']} 
-          typeSpeed={65}
-          style={{fontWeight: "bold", fontSize: '40px'}}
-        />
-      </>
-
+      <ReactTyped 
+        strings={['Developer 최지우의 포트폴리오']} 
+        typeSpeed={65}
+        style={{fontWeight: "bold", fontSize: '40px'}}
+      />
     )
-    
   };
+
+  // const useFadeIn = (duration = 0, delay = 0) => {
+  //   if (typeof duration !== "number" || typeof delay !== "number") {
+  //     return;
+  //   }
+  //   const element = useRef();
+  //   useEffect(() => {
+  //     if (element.current) {
+  //       const {current} = element;
+  //       current.style.transition = `opacity ${duration} ${delay}s`;
+  //       current.style.opacity = 1;
+  //     }
+  //   }, []);
+  //   return { ref: element };
+  // };
 
   return (
     <Container>
@@ -80,7 +96,7 @@ function Main() {
           {TypedText()}
           <br/>
           <hr/>
-          <p>안녕하세요<br/>풀스택 개발자 최지우입니다</p>
+          <p {...useFadeIn(1,0)}>안녕하세요<br/>풀스택 개발자 최지우입니다</p>
         </div>
 
       </MainContainer>
@@ -90,9 +106,10 @@ function Main() {
 
 
 
+
+
+
     </Container>
-
-
   );
 }
 
