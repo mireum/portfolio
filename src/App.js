@@ -3,6 +3,7 @@
 import { Route, Routes } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import Main from "./components/Main";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -23,7 +24,7 @@ function App() {
     <>
       <GlobalStyle />
       <Routes>
-        <Route path="/" element={} />
+        <Route path="/" element={<Main />} />
       </Routes>
     </>
   );
