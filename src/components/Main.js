@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { ReactTyped } from "react-typed";
 import { useFadeIn } from '../func/Func';
@@ -38,14 +38,17 @@ const MainContainer = styled.div`
   p {
     font-size: 20px;
     margin-top: 60px;
-    /* border-top: 2px dashed #c73232; */
-    padding: 30px;
+    transition: 2s;
     opacity: 0;
-    transition: .5s;
+    animation-name: text1;
+    animation-duration: 2s;
+    /* animation-delay: 0.5s; */
   }
-  p:on {
-    opacity: 1;
+  @keyframes text1 {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0px); }
   }
+
 `;
 
 function Main() {
@@ -59,21 +62,6 @@ function Main() {
       />
     )
   };
-
-  // const useFadeIn = (duration = 0, delay = 0) => {
-  //   if (typeof duration !== "number" || typeof delay !== "number") {
-  //     return;
-  //   }
-  //   const element = useRef();
-  //   useEffect(() => {
-  //     if (element.current) {
-  //       const {current} = element;
-  //       current.style.transition = `opacity ${duration} ${delay}s`;
-  //       current.style.opacity = 1;
-  //     }
-  //   }, []);
-  //   return { ref: element };
-  // };
 
   return (
     <Container>
@@ -95,8 +83,8 @@ function Main() {
         <div>
           {TypedText()}
           <br/>
-          <hr/>
-          <p {...useFadeIn(1,0)}>안녕하세요<br/>풀스택 개발자 최지우입니다</p>
+          {/* <hr/> */}
+          <p {...useFadeIn(2, 0)}>안녕하세요<br/>풀스택 개발자 최지우입니다</p>
         </div>
 
       </MainContainer>
