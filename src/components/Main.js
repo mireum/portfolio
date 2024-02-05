@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ReactTyped } from "react-typed";
 import { useFadeIn } from '../func/Func';
 import mainImg from "../image/main.jpg";
+import { BsPersonLinesFill } from "react-icons/bs";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -52,7 +53,7 @@ const HeaderBox = styled.header`
   }
 `;
 
-const MainContainer = styled.div`
+const MainContainer = styled.article`
   height: 600px;
   text-align: center;
   display: flex;
@@ -105,6 +106,77 @@ const MainContainer = styled.div`
   }
 `;
 
+const About = styled.article`
+  height: 600px;
+  background-color: cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .aboutBox{
+    width: 70%;
+    background-color: aliceblue;
+
+    h3 {
+      font-size: 48px;
+      font-family: 'GongGothicBold';
+      text-decoration: underline 1px;
+      text-underline-offset: 20px;
+      padding: 10px 0;
+      margin-bottom: 30px;
+    }
+    ul {
+      /* border: 1px solid black; */
+      width: 70%;
+      padding: 30px 0;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 30px;
+      box-shadow: rgba(149, 160, 165, 0.2) 0px 8px 24px;
+      font-size: 20px;
+
+      li span.underline {
+        font-size: 30px;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(94,182,45,1) 0%, rgba(76,186,139,0.9) 50%, rgba(0,212,255,1) 100%);
+        background-position: bottom;
+        background-size: 100% 30%;
+        background-repeat: no-repeat;
+      }
+      li + li {
+        margin-top: 30px;
+      }
+    }
+    .info {
+      width: 70%;
+      background-color: aqua;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .info > .infoBox {
+      width: 50%;
+      line-height: 2rem;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 20px;
+
+      .icon {
+        font-size: 40px;
+      }
+      .content {
+        font-family: 'GongGothicBold';
+      }
+      .text {
+        font-size: 16px;
+        font-family: 'GongGothicMedium';
+      }
+    }
+  }
+`;
+
 function Main() {
 
   const TypedText = () => {
@@ -146,7 +218,33 @@ function Main() {
         </div>
       </MainContainer>
 
-
+      {/* About me */}
+      <About>
+        <div className='aboutBox'>
+          <h3>ABOUT ME</h3>
+          <ul>
+            <li><span>▪쉽게 포기하지 않는 <span className='underline'>근성</span>이 있습니다.</span></li>
+            <li><span>▪문제를 <span className='underline'>극복</span>하고&nbsp;
+              <span className='underline'>발전</span>하는 것을 좋아합니다.</span></li>
+            <li><span>▪새로운 것을 <span className='underline'>배움</span>에&nbsp; 
+              <span className='underline'>적극적</span>입니다.</span></li>
+          </ul>
+          <div className='info'>
+            <div className='infoBox'>
+              <div className='icon'>
+                <BsPersonLinesFill />
+              </div>
+              <div className='content'>
+                이름<br/>
+                <span className='text'>최지우</span>
+              </div>
+            </div>
+            <div>연락처</div>
+            <div>이메일</div>
+            <div>학력</div>
+          </div>
+        </div>
+      </About>
 
 
 
