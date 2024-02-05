@@ -10,15 +10,45 @@ const Container = styled.div`
 
 const HeaderBox = styled.header`
   width: 100%;
-  height: 72px;
-  display: flex;
   position: fixed;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
+  top: 0;
+  background-color: transparent;
+  z-index: 10;
+  
+  /* 내리면 흰바탕에 color black으로 */
+  color: white;
 
-  nav > ul{
+  .header {
+    max-width: 70%;
+    height: 72px;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    
+    h4 {
+      font-size: 24px;
+    }
+    nav > ul{
+      display: flex;
+  
+      li {
+        cursor: pointer;
+      }
+      li + li {
+        margin-left: 30px;
+      }
+    }
+    h4:hover, li:hover {
+      animation-name: header;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes header {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-5px); }
+    }
   }
 `;
 
@@ -28,33 +58,51 @@ const MainContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${mainImg});
+  background-image: linear-gradient(0deg, rgba(112,93,80,.8), rgba(0, 0, 0, 0.5)), url(${mainImg});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
 
-  /* hr {
-    width: 4rem;
-    height: 0.4rem;
-    border-radius: 5px;
-    background-color: #c73232;
-  } */
   p {
     font-size: 24px;
     margin-top: 60px;
-    line-height: 1.7rem;
-    transition: 2s;
-    opacity: 0;
+    line-height: 1.8rem;
     animation-name: text1;
     animation-duration: 2s;
-    /* animation-delay: 0.5s; */
+  }
+
+  button {
+    line-height: 2rem;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 24px;
+    background-color: #bd7f46;
+    color: #fff;
+    font-family: 'GongGothicMedium';
+    font-size: 16px;
+    position: relative;
+    top: 60px;
+    animation-name: btn1;
+    animation-duration: 2s;
+
+    span {
+      position: relative;
+      top: 8px;
+      left: 5px;
+    }
+  }
+  button:hover {
+    background-color: #a16b3a;
   }
   @keyframes text1 {
     0% { opacity: 0; transform: translateY(30px); }
     100% { opacity: 1; transform: translateY(0px); }
   }
-
+  @keyframes btn1 {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0px); }
+  }
 `;
 
 function Main() {
@@ -72,16 +120,18 @@ function Main() {
   return (
     <Container>
       <HeaderBox>
-        <h4>최지우's Portfolio</h4>
-        <nav>
-          <ul>
-            <li>About me</li>
-            <li>Skills</li>
-            <li>Archive</li>
-            <li>Projects</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
+        <div className='header'>
+          <h4 className='cursor-p'>최지우's Portfolio</h4>
+          <nav>
+            <ul>
+              <li>About me</li>
+              <li>Skills</li>
+              <li>Archive</li>
+              <li>Projects</li>
+              <li>Contact</li>
+            </ul>
+          </nav>
+        </div>
       </HeaderBox>
 
       {/* 메인 */}
@@ -89,12 +139,11 @@ function Main() {
         <div>
           {TypedText()}
           <br/>
-          {/* <hr/> */}
           <p {...useFadeIn(2, 0)}>안녕하세요.<br/>풀스택 개발자 최지우입니다.<br/>
             끈기 있으며, 배우는 것을 좋아합니다.
           </p>
+          <button className='cursor-p'>Read More<span class="material-symbols-outlined">stat_minus_2</span></button>
         </div>
-
       </MainContainer>
 
 
