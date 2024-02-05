@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     box-sizing: border-box;
-    /* font-family: 'esamanru', 'esamanru Light', 'esamanru Medium', 'esamanru Bold'; */
     font-family: 'GongGothicMedium';
   }
   * {

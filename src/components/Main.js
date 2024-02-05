@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { ReactTyped } from "react-typed";
 import { useFadeIn } from '../func/Func';
+import mainImg from "../image/main.jpg";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -23,21 +24,26 @@ const HeaderBox = styled.header`
 
 const MainContainer = styled.div`
   height: 600px;
-  background-color: cyan;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${mainImg});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
 
-  hr {
+  /* hr {
     width: 4rem;
     height: 0.4rem;
     border-radius: 5px;
     background-color: #c73232;
-  }
+  } */
   p {
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 60px;
+    line-height: 1.7rem;
     transition: 2s;
     opacity: 0;
     animation-name: text1;
@@ -84,7 +90,9 @@ function Main() {
           {TypedText()}
           <br/>
           {/* <hr/> */}
-          <p {...useFadeIn(2, 0)}>안녕하세요<br/>풀스택 개발자 최지우입니다</p>
+          <p {...useFadeIn(2, 0)}>안녕하세요.<br/>풀스택 개발자 최지우입니다.<br/>
+            끈기 있으며, 배우는 것을 좋아합니다.
+          </p>
         </div>
 
       </MainContainer>
