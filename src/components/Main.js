@@ -58,7 +58,7 @@ function Main() {
       <ReactTyped 
         strings={['Developer 최지우의 포트폴리오']} 
         typeSpeed={65}
-        style={{fontWeight: "bold", fontSize: '40px'}}
+        style={{fontWeight: "bold", fontSize: '40px', fontFamily: 'GongGothicBold'}}
       />
     )
   };

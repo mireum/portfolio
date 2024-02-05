@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import { Route, Routes } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     box-sizing: border-box;
+    /* font-family: 'esamanru', 'esamanru Light', 'esamanru Medium', 'esamanru Bold'; */
+    font-family: 'GongGothicMedium';
   }
   * {
     box-sizing: inherit;
