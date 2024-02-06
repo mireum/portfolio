@@ -6,6 +6,7 @@ import mainImg from "../image/main.jpg";
 import { throttle } from 'lodash';
 import Header from './Header';
 import AboutMe from './AboutMe';
+import Skills from './Skills';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -118,7 +119,8 @@ function Main() {
       {/* About me */}
       <AboutMe />
 
-
+      {/* Skills */}
+      <Skills />
 
 
 

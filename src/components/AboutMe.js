@@ -83,55 +83,55 @@ const About = styled.article`
 function AboutMe(props) {
   return (
     <About>
-    <div className='aboutBox'>
-      <h3>ABOUT ME</h3>
-      <ul>
-        <li><span>▪쉽게 포기하지 않는 <span className='underline'>근성</span>이 있습니다.</span></li>
-        <li><span>▪문제를 <span className='underline'>극복</span>하고&nbsp;
-          <span className='underline'>발전</span>하는 것을 좋아합니다.</span></li>
-        <li><span>▪새로운 것을 <span className='underline'>배움</span>에&nbsp; 
-          <span className='underline'>적극적</span>입니다.</span></li>
-      </ul>
-      <div className='info'>
-        <div className='infoBox'>
-          <div className='icon'>
-            <BsPersonLinesFill style={{position: 'relative', right: '17px'}}/>
+      <div className='aboutBox'>
+        <h3>ABOUT ME</h3>
+        <ul>
+          <li><span>▪쉽게 포기하지 않는 <span className='underline'>근성</span>이 있습니다.</span></li>
+          <li><span>▪문제를 <span className='underline'>극복</span>하고&nbsp;
+            <span className='underline'>발전</span>하는 것을 좋아합니다.</span></li>
+          <li><span>▪새로운 것을 <span className='underline'>배움</span>에&nbsp; 
+            <span className='underline'>적극적</span>입니다.</span></li>
+        </ul>
+        <div className='info'>
+          <div className='infoBox'>
+            <div className='icon'>
+              <BsPersonLinesFill style={{position: 'relative', right: '17px'}}/>
+            </div>
+            <div className='content'>
+              이름<br/><hr/>
+              <span className='text'>최지우</span>
+            </div>
           </div>
-          <div className='content'>
-            이름<br/><hr/>
-            <span className='text'>최지우</span>
+          <div className='infoBox'>
+            <div className='icon'>
+              <MdCall />
+            </div>
+            <div className='content'>
+              연락처<br/><hr/>
+              <span className='text'>010-4378-9978</span>
+            </div>
           </div>
-        </div>
-        <div className='infoBox'>
-          <div className='icon'>
-            <MdCall />
+          <div className='infoBox'>
+            <div className='icon'>
+              <IoIosMail />
+            </div>
+            <div className='content'>
+              이메일<br/><hr/>
+              <span className='text'>yljw225<br/>@naver.com</span>
+            </div>
           </div>
-          <div className='content'>
-            연락처<br/><hr/>
-            <span className='text'>010-4378-9978</span>
-          </div>
-        </div>
-        <div className='infoBox'>
-          <div className='icon'>
-            <IoIosMail />
-          </div>
-          <div className='content'>
-            이메일<br/><hr/>
-            <span className='text'>yljw225<br/>@naver.com</span>
-          </div>
-        </div>
-        <div className='infoBox'>
-          <div className='icon'>
-            <MdSchool />
-          </div>
-          <div className='content'>
-            학력<br/><hr/>
-            <span className='text'>가톨릭 대학교<br/>정보통신전자공학과</span>
+          <div className='infoBox'>
+            <div className='icon'>
+              <MdSchool />
+            </div>
+            <div className='content'>
+              학력<br/><hr/>
+              <span className='text'>가톨릭 대학교<br/>정보통신전자공학과</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </About>
+    </About>
   );
 }
 
