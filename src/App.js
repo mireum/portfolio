@@ -3,7 +3,8 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import Main from "./components/Main";
+import Main from './components/Main';
+
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { ReactTyped } from "react-typed";
 import { useFadeIn } from '../func/Func';
@@ -7,54 +7,10 @@ import { BsPersonLinesFill } from "react-icons/bs";
 import { MdCall, MdSchool } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import { throttle } from 'lodash';
+import Header from './Header';
 
 const Container = styled.div`
   margin: 0 auto;
-`;
-
-const HeaderBox = styled.header`
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background-color: transparent;
-  z-index: 10;
-  
-  
-  /* 내리면 흰바탕에 color black으로 */
-  color: white;
-
-  .header {
-    max-width: 70%;
-    height: 72px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    
-    h4 {
-      font-size: 24px;
-    }
-    nav > ul{
-      display: flex;
-  
-      li {
-        cursor: pointer;
-      }
-      li + li {
-        margin-left: 30px;
-      }
-    }
-    h4:hover, li:hover {
-      animation-name: header;
-      animation-duration: .5s;
-      animation-fill-mode: forwards;
-    }
-    @keyframes header {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-5px); }
-    }
-  }
 `;
 
 const MainContainer = styled.article`
@@ -162,6 +118,7 @@ const About = styled.article`
     }
     .info > .infoBox {
       width: 330px;
+      height: 130px;
       min-width: 245px;
       font-size: 20px;
       display: flex;
@@ -187,30 +144,28 @@ const About = styled.article`
 `;
 
 function Main() {
-  const [visible, setVisible] = useState(true);
-  const beforeScrollY = useRef(0);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  
   const handleScroll = useMemo(
     () =>
-      throttle(() => {
-        const currentScrollY = window.scrollY;
-        if (beforeScrollY.current < currentScrollY) {
-          setVisible(false);
-        } else {
-          setVisible(true);
-        }
-        beforeScrollY.current = currentScrollY;
-      }, 250),
-    [beforeScrollY]
+    throttle(() => {
+      const currentScrollY = window.scrollY;
+      if (50 < currentScrollY) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    }, 250), []
   );
-  console.log(visible);
+
   const TypedText = () => {
     return (
       <ReactTyped 
@@ -223,20 +178,8 @@ function Main() {
 
   return (
     <Container>
-      <HeaderBox>
-        <div className='header'>
-          <h4 className='cursor-p'>최지우's Portfolio</h4>
-          <nav>
-            <ul>
-              <li>About me</li>
-              <li>Skills</li>
-              <li>Archive</li>
-              <li>Projects</li>
-              <li>Contact</li>
-            </ul>
-          </nav>
-        </div>
-      </HeaderBox>
+      {/* 헤더 */}
+      <Header scroll={visible} />
 
       {/* 메인 */}
       <MainContainer>
