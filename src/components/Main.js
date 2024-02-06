@@ -67,7 +67,7 @@ const MainContainer = styled.article`
 `;
 
 const About = styled.article`
-  background-color: cyan;
+  background-color: aliceblue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,7 +77,6 @@ const About = styled.article`
     width: 70%;
     max-width: 1100px;
     padding: 4rem 2rem 2rem;
-    background-color: aliceblue;
 
     h3 {
       font-size: 48px;
