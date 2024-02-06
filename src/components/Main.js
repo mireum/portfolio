@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { ReactTyped } from "react-typed";
 import { useFadeIn } from '../func/Func';
 import mainImg from "../image/main.jpg";
 import { BsPersonLinesFill } from "react-icons/bs";
+import { MdCall, MdSchool } from "react-icons/md";
+import { IoIosMail } from "react-icons/io";
+import { throttle } from 'lodash';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -15,6 +18,7 @@ const HeaderBox = styled.header`
   top: 0;
   background-color: transparent;
   z-index: 10;
+  
   
   /* 내리면 흰바탕에 color black으로 */
   color: white;
@@ -183,7 +187,30 @@ const About = styled.article`
 `;
 
 function Main() {
+  const [visible, setVisible] = useState(true);
+  const beforeScrollY = useRef(0);
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScroll = useMemo(
+    () =>
+      throttle(() => {
+        const currentScrollY = window.scrollY;
+        if (beforeScrollY.current < currentScrollY) {
+          setVisible(false);
+        } else {
+          setVisible(true);
+        }
+        beforeScrollY.current = currentScrollY;
+      }, 250),
+    [beforeScrollY]
+  );
+  console.log(visible);
   const TypedText = () => {
     return (
       <ReactTyped 
@@ -219,7 +246,7 @@ function Main() {
           <p {...useFadeIn(2, 0)}>안녕하세요.<br/>풀스택 개발자 최지우입니다.<br/>
             끈기 있으며, 배우는 것을 좋아합니다.
           </p>
-          <button className='cursor-p'>Read More<span class="material-symbols-outlined">stat_minus_2</span></button>
+          <button className='cursor-p'>Read More<span className="material-symbols-outlined">stat_minus_2</span></button>
         </div>
       </MainContainer>
 
@@ -246,7 +273,7 @@ function Main() {
             </div>
             <div className='infoBox'>
               <div className='icon'>
-                <BsPersonLinesFill />
+                <MdCall />
               </div>
               <div className='content'>
                 연락처<br/><hr/>
@@ -255,7 +282,7 @@ function Main() {
             </div>
             <div className='infoBox'>
               <div className='icon'>
-                <BsPersonLinesFill />
+                <IoIosMail />
               </div>
               <div className='content'>
                 이메일<br/><hr/>
@@ -264,17 +291,17 @@ function Main() {
             </div>
             <div className='infoBox'>
               <div className='icon'>
-                <BsPersonLinesFill />
+                <MdSchool />
               </div>
               <div className='content'>
                 학력<br/><hr/>
                 <span className='text'>가톨릭 대학교<br/>정보통신전자공학과</span>
               </div>
             </div>
-
           </div>
         </div>
       </About>
+
 
 
 
