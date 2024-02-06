@@ -107,7 +107,6 @@ const MainContainer = styled.article`
 `;
 
 const About = styled.article`
-  height: 600px;
   background-color: cyan;
   display: flex;
   align-items: center;
@@ -116,6 +115,8 @@ const About = styled.article`
 
   .aboutBox{
     width: 70%;
+    max-width: 1100px;
+    padding: 4rem 2rem 2rem;
     background-color: aliceblue;
 
     h3 {
@@ -127,7 +128,6 @@ const About = styled.article`
       margin-bottom: 30px;
     }
     ul {
-      /* border: 1px solid black; */
       width: 70%;
       padding: 30px 0;
       margin: 0 auto;
@@ -148,20 +148,25 @@ const About = styled.article`
       }
     }
     .info {
-      width: 70%;
-      background-color: aqua;
+      width: 100%;
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
+      padding: 30px;
+      justify-content: center;
+      align-items: center;
     }
     .info > .infoBox {
-      width: 50%;
-      line-height: 2rem;
+      width: 330px;
+      min-width: 245px;
       font-size: 20px;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      padding: 20px;
+      padding: 30px;
+      box-shadow: rgba(149, 160, 165, 0.4) 0px 8px 24px;
+      border-radius: 20px;
+      margin: 14px;
 
       .icon {
         font-size: 40px;
@@ -232,16 +237,41 @@ function Main() {
           <div className='info'>
             <div className='infoBox'>
               <div className='icon'>
-                <BsPersonLinesFill />
+                <BsPersonLinesFill style={{position: 'relative', right: '17px'}}/>
               </div>
               <div className='content'>
-                이름<br/>
+                이름<br/><hr/>
                 <span className='text'>최지우</span>
               </div>
             </div>
-            <div>연락처</div>
-            <div>이메일</div>
-            <div>학력</div>
+            <div className='infoBox'>
+              <div className='icon'>
+                <BsPersonLinesFill />
+              </div>
+              <div className='content'>
+                연락처<br/><hr/>
+                <span className='text'>010-4378-9978</span>
+              </div>
+            </div>
+            <div className='infoBox'>
+              <div className='icon'>
+                <BsPersonLinesFill />
+              </div>
+              <div className='content'>
+                이메일<br/><hr/>
+                <span className='text'>yljw225<br/>@naver.com</span>
+              </div>
+            </div>
+            <div className='infoBox'>
+              <div className='icon'>
+                <BsPersonLinesFill />
+              </div>
+              <div className='content'>
+                학력<br/><hr/>
+                <span className='text'>가톨릭 대학교<br/>정보통신전자공학과</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </About>
