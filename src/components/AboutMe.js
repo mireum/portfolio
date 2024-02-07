@@ -22,7 +22,7 @@ const About = styled.article`
       text-decoration: underline 1px;
       text-underline-offset: 20px;
       padding: 10px 0;
-      margin-bottom: 30px;
+      margin-bottom: 60px;
     }
     ul {
       width: 70%;
