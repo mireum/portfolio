@@ -7,6 +7,7 @@ import { throttle } from 'lodash';
 import Header from './Header';
 import AboutMe from './AboutMe';
 import Skills from './Skills';
+import Projects from './Projects';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -122,8 +123,11 @@ function Main() {
       {/* Skills */}
       <Skills />
 
+      {/* Archive */}
+      {/* <Archive /> */}
 
-
+      {/* Projects */}
+      <Projects />
 
 
 
