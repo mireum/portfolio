@@ -8,6 +8,7 @@ import Header from './Header';
 import AboutMe from './AboutMe';
 import Skills from './Skills';
 import Projects from './Projects';
+import Contact from './Contact';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -123,13 +124,11 @@ function Main() {
       {/* Skills */}
       <Skills />
 
-      {/* Archive */}
-      {/* <Archive /> */}
-
       {/* Projects */}
       <Projects />
 
-
+      {/* Contact */}
+      <Contact />
 
     </Container>
   );

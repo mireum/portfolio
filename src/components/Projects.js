@@ -27,6 +27,8 @@ const ProjectsContainer = styled.article`
 
 const ContentBox = styled.div`
   box-shadow: rgba(149, 160, 165, 0.2) 0px 8px 24px;
+  background-color: #fff;
+  border-radius: 30px;
 
   h4 {
     font-size: 34px;
@@ -37,8 +39,6 @@ const ContentBox = styled.div`
 
   .divBox {
     padding: 20px;
-    background-color: #fff;
-    border-radius: 20px;
 
     img {
       width: 50%;    

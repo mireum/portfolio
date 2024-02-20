@@ -61,7 +61,6 @@ function Header(props) {
           <ul>
             <li>About me</li>
             <li>Skills</li>
-            <li>Archive</li>
             <li>Projects</li>
             <li>Contact</li>
           </ul>
