@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { HiArrowUpCircle } from "react-icons/hi2";
-import { moveToScroll } from '../func/Func';
 
 const FooterContainer = styled.footer`
   background-color: #343434;

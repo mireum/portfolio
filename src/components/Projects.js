@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { img1, img2 } from "../image/index";
 
@@ -53,10 +53,10 @@ const ContentBox = styled.div`
   }
 `;
 
-function Projects(props) {
-
+// function Projects(props) {
+const Projects = forwardRef((props, ref) => {
   return (
-    <ProjectsContainer>
+    <ProjectsContainer ref={aboutRef => (ref.current[2] = aboutRef)}>
       <div className='ProjectsBox'>
         <h3>Projects</h3>
           <ContentBox>
@@ -90,6 +90,6 @@ function Projects(props) {
       </div>
     </ProjectsContainer>
   );
-}
+});
 
 export default Projects;

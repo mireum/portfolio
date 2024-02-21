@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import HTML from '../image/HTML';
 import { AWS, C, CLOUDTYPE, CPP, CSS, EXPRESSJS, FIGMA, GITHUB, JAVA, JS, MONGODB, MONGOOSE, NETLIFY, NEXTJS, NODEJS, PYTHON, REACT, REDUX, TRELLO } from '../image';
@@ -67,9 +67,10 @@ const SkillBox = styled.article`
   }
 `;
 
-function Skills(props) {
+// function Skills(props) {
+const Skills = forwardRef((props, ref) => {
   return (
-    <SkillBox>
+    <SkillBox ref={aboutRef => (ref.current[1] = aboutRef)}>
       <div className='aboutBox'>
         <h3>SKILLS</h3>
         <div className='skillBox'>
@@ -125,6 +126,8 @@ function Skills(props) {
       </div>
     </SkillBox>
   );
-}
+  
+});
+// }
 
 export default Skills;

@@ -33,6 +33,10 @@ const HeaderBox = styled.header`
   
       li {
         cursor: pointer;
+        font-family: 'GongGothicBold';
+      }
+      li.active {
+        /* color: #808080; */
       }
       li + li {
         margin-left: 30px;
@@ -61,8 +65,6 @@ const NAV = [
 const Header = ({ scroll, scrollRef }) => {
   const [navIndex, setNavIndex] = useState(null);
   const navRef = useRef([]);
-
-  // const { scroll } = props;
 
   useEffect(() => {
     scrollRef.current[navIndex]?.scrollIntoView({ behavior: 'smooth' });

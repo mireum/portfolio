@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { MdContentCopy } from "react-icons/md";
 
@@ -32,7 +32,8 @@ const ContactContainer = styled.article`
     }
   }
 `;
-function Contact(props) {
+// function Contact(props) {
+const Contact = forwardRef((props, ref) => {
 
   const handleCopyClipBoard = async (text) => {
     try {
@@ -44,13 +45,13 @@ function Contact(props) {
   };
 
   return (
-    <ContactContainer>
+    <ContactContainer ref={aboutRef => (ref.current[3] = aboutRef)}>
       <div className='ContactBox'>
         <h3>Contact</h3>
         <p>Email: <span className='cursor-p' onClick={() => handleCopyClipBoard('yljw225@naver.com')}>yljw225@naver.com <MdContentCopy /></span></p>
       </div>
     </ContactContainer>
   );
-}
+});
 
 export default Contact;

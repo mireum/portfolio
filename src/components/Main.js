@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState, useRef, forwardRef } from 'react';
+import React, { useEffect, useMemo, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { ReactTyped } from "react-typed";
 import { useFadeIn } from '../func/Func';
@@ -68,9 +68,6 @@ const MainContainer = styled.article`
   }
 `;
 
-// const Input = forwardRef(function Input(props, ref1) {
-//   return <AboutMe ref={ref1}/>;
-// });
 
 function Main() {
   const [visible, setVisible] = useState(false);
@@ -105,17 +102,6 @@ function Main() {
     )
   };
 
-  // const top = useRef();
-  // const element = useRef<HTMLDivElement>(null);
-  // const moveTo = () => {
-  //   element.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  // };
-  
-  
-  // const moveTo = () => {
-  //   ref1.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  // };
-    
   const scrollRef = useRef([]);
 
   return (
@@ -131,7 +117,7 @@ function Main() {
           <p {...useFadeIn(2, 0)}>안녕하세요.<br/>풀스택 개발자 최지우입니다.<br/>
             끈기 있으며, 배우는 것을 좋아합니다.
           </p>
-          <button className='cursor-p'>Read More<span className="material-symbols-outlined">stat_minus_2</span></button>
+          <button className='cursor-p' onClick={() => {window.scrollTo({ top: 600, behavior: 'smooth' })}}>Read More<span className="material-symbols-outlined">stat_minus_2</span></button>
         </div>
       </MainContainer>
 
