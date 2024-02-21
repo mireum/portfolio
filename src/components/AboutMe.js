@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { BsPersonLinesFill } from "react-icons/bs";
 import { MdCall, MdSchool } from "react-icons/md";
@@ -80,9 +80,11 @@ const About = styled.article`
   }
 `;
 
-function AboutMe(props) {
+// function AboutMe(props) {
+//   return (
+const AboutMe = forwardRef((props, ref) => {
   return (
-    <About>
+    <About ref={aboutRef => (ref.current[0] = aboutRef)}>
       <div className='aboutBox'>
         <h3>ABOUT ME</h3>
         <ul>
@@ -132,7 +134,13 @@ function AboutMe(props) {
         </div>
       </div>
     </About>
+
+
+
   );
-}
+});
+
+  // );
+// }
 
 export default AboutMe;

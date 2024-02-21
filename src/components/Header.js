@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 
 const HeaderBox = styled.header`
@@ -50,8 +50,44 @@ const HeaderBox = styled.header`
   }
 `;
 
-function Header(props) {
-  const { scroll } = props;
+const NAV = [
+  {idx: 0, name: 'About Me'},
+  {idx: 1, name: 'Skills'},
+  {idx: 2, name: 'Projects'},
+  {idx: 3, name: 'Contact'},
+]
+
+// function Header(props) {
+const Header = ({ scroll, scrollRef }) => {
+  const [navIndex, setNavIndex] = useState(null);
+  const navRef = useRef([]);
+
+  // const { scroll } = props;
+
+  useEffect(() => {
+    scrollRef.current[navIndex]?.scrollIntoView({ behavior: 'smooth' });
+    setNavIndex(null);
+  }, [scrollRef, navIndex]);
+
+  // 현재 스크롤 위치에 따라 NavBar 버튼 스타일 바꿈
+  useEffect(() => {
+    const changeNavBtnStyle = () => {
+      scrollRef.current.forEach((ref, idx) => {
+        if (ref.offsetTop - 180 < window.scrollY) {
+          navRef.current.forEach(ref => {
+            ref.className = ref.className.replace(' active', '');
+          });
+          
+          navRef.current[idx].className += ' active';
+        }
+      });
+    };
+    window.addEventListener('scroll', changeNavBtnStyle);
+
+    return () => {
+      window.removeEventListener('scroll', changeNavBtnStyle);
+    };
+  }, [scrollRef]);
 
   return (
     <HeaderBox color={scroll}>
@@ -59,15 +95,25 @@ function Header(props) {
         <h4 className='cursor-p'>최지우's Portfolio</h4>
         <nav>
           <ul>
-            <li>About me</li>
+            {NAV.map(({ idx, name }) => (
+              <li 
+                key={idx} 
+                ref={ref => (navRef.current[idx] = ref)} 
+                onClick={() => {setNavIndex(idx);}}
+              >
+                {name}
+              </li>
+            ))}
+            {/* <li>About me</li>
             <li>Skills</li>
             <li>Projects</li>
-            <li>Contact</li>
+            <li>Contact</li> */}
           </ul>
         </nav>
       </div>
     </HeaderBox>
   );
-}
 
+// }
+}
 export default Header;

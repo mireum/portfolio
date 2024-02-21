@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, useRef, forwardRef } from 'react';
 import styled from 'styled-components';
 import { ReactTyped } from "react-typed";
 import { useFadeIn } from '../func/Func';
@@ -9,6 +9,7 @@ import AboutMe from './AboutMe';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
+import Footer from './Footer';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -67,6 +68,9 @@ const MainContainer = styled.article`
   }
 `;
 
+// const Input = forwardRef(function Input(props, ref1) {
+//   return <AboutMe ref={ref1}/>;
+// });
 
 function Main() {
   const [visible, setVisible] = useState(false);
@@ -101,10 +105,23 @@ function Main() {
     )
   };
 
+  // const top = useRef();
+  // const element = useRef<HTMLDivElement>(null);
+  // const moveTo = () => {
+  //   element.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // };
+  
+  
+  // const moveTo = () => {
+  //   ref1.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // };
+    
+  const scrollRef = useRef([]);
+
   return (
     <Container>
       {/* 헤더 */}
-      <Header scroll={visible} />
+      <Header scroll={visible} scrollRef={scrollRef} />
 
       {/* 메인 */}
       <MainContainer>
@@ -119,16 +136,20 @@ function Main() {
       </MainContainer>
 
       {/* About me */}
-      <AboutMe />
-
+      {/* {Input} */}
+      <AboutMe ref={scrollRef} />
+      
       {/* Skills */}
-      <Skills />
+      <Skills ref={scrollRef} />
 
       {/* Projects */}
-      <Projects />
+      <Projects ref={scrollRef} />
 
       {/* Contact */}
-      <Contact />
+      <Contact ref={scrollRef} />
+
+      {/* Footer */}
+      <Footer />
 
     </Container>
   );

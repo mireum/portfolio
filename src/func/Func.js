@@ -15,3 +15,16 @@ export const useFadeIn = (duration = 0, delay = 0) => {
   }, [duration, delay]);
   return { ref: element, style: { opacity: 0 } };
 };
+
+// export const moveToScroll = () => {
+//   const element = useRef(null);
+//   const moveTo = () => {
+//     element.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+//   };
+//   return { element, moveTo };
+// }
+
+// const totop = () => {
+//   const element = document.getElementById("box");
+//   element.scrollIntoView({ block: "start"});
+// }

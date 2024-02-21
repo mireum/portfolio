@@ -54,6 +54,7 @@ const ContentBox = styled.div`
 `;
 
 function Projects(props) {
+
   return (
     <ProjectsContainer>
       <div className='ProjectsBox'>
