@@ -1,5 +1,6 @@
 export const img1 = require('./project1.png');
 export const img2 = require('./project2.png');
+export const img3 = require('./project3.png');
 export const CSS = require('./CSS.3.svg.png');
 export const JS = require('./Javascript_Logo.png');
 export const REACT = require('./REACT.png');

@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { img1, img2 } from "../image/index";
+import { img1, img2, img3 } from "../image/index";
 
 const ProjectsContainer = styled.article`
   background-color: aliceblue;
@@ -84,6 +84,19 @@ const Projects = forwardRef((props, ref) => {
                 <hr/>
                 <p>◾URL  <a href='https://event-moum.netlify.app/'>event-moum.netlify.app/</a></p>
                 <p>◾GitHub  <a href='https://github.com/mireum/event-project'>github.com/mireum/event-project</a></p>
+              </div>
+            </div>
+          </ContentBox>
+          <ContentBox>
+            <div className='divBox'>
+              <h4>Portfolio</h4>
+              <img src={img3} alt='project3_img'/>
+              <div className='pBox'>
+                <p>저의 포트폴리오입니다.</p>
+                <p>포트폴리오 겸 리액트와 노드를 연습하기 위해 노력했습니다.</p>
+                <hr/>
+                <p>◾URL  <a href='https://portfolio-e1ugigqjv-mireums-projects.vercel.app/'>portfolio-e1ugigqjv-mireums-projects.vercel.app/</a></p>
+                <p>◾GitHub  <a href='https://github.com/mireum/portfolio'>github.com/mireum/portfolio</a></p>
               </div>
             </div>
           </ContentBox>
