@@ -80,9 +80,10 @@ const Projects = forwardRef((props, ref) => {
               <div className='pBox'>
                 <p>전국의 축제와 전시회를 한 눈에 찾아보고 필요하다면 예약도 할 수 있는 웹입니다.</p>
                 <p>주요 기능으로는 원하는 축제를 카테고리에 따라 찾아보고 상세 정보(위치, 웹페이지) 등과 예약을 할 수 있습니다.</p>
+                <p>✔이 프로젝트는 혼자 공부하여 웹호스팅 사이트를 이용하지 않고 웹 서버를 사용해 배포하였습니다! </p>
                 <p>❗실 서비스 중은 아닙니다.</p>
                 <hr/>
-                <p>◾URL  <a href='https://event-moum.netlify.app/'>event-moum.netlify.app/</a></p>
+                <p>◾URL  <a href='https://event.devcjw.com/'>event.devcjw.com/</a></p>
                 <p>◾GitHub  <a href='https://github.com/mireum/event-project'>github.com/mireum/event-project</a></p>
               </div>
             </div>
