@@ -96,7 +96,7 @@ const Projects = forwardRef((props, ref) => {
                 <p>저의 포트폴리오입니다.</p>
                 <p>포트폴리오 겸 리액트와 노드를 연습하기 위해 노력했습니다.</p>
                 <hr/>
-                <p>◾URL  <a href='https://portfolio-e1ugigqjv-mireums-projects.vercel.app/'>portfolio-e1ugigqjv-mireums-projects.vercel.app/</a></p>
+                <p>◾URL  <a href='https://cjwsportfolio.vercel.app/'>https://cjwsportfolio.vercel.app//</a></p>
                 <p>◾GitHub  <a href='https://github.com/mireum/portfolio'>github.com/mireum/portfolio</a></p>
               </div>
             </div>
