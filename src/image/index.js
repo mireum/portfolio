@@ -20,3 +20,5 @@ export const C = require('./C.png');
 export const CPP = require('./C++.png');
 export const PYTHON = require('./Python-Logo.png');
 export const JAVA = require('./Java-Logo.png');
+export const TAILWIND = require('./Tailwind.png');
+export const NGINX = require('./Nginx.png');

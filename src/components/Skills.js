@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import HTML from '../image/HTML';
-import { AWS, C, CLOUDTYPE, CPP, CSS, EXPRESSJS, FIGMA, GITHUB, JAVA, JS, MONGODB, MONGOOSE, NETLIFY, NEXTJS, NODEJS, PYTHON, REACT, REDUX, TRELLO } from '../image';
+import { NGINX, AWS, C, CLOUDTYPE, CPP, CSS, EXPRESSJS, FIGMA, GITHUB, JAVA, JS, MONGODB, MONGOOSE, NETLIFY, NEXTJS, NODEJS, PYTHON, REACT, REDUX, TAILWIND, TRELLO } from '../image';
 import SASS from '../image/SASS';
 
 const SkillBox = styled.article`
@@ -84,6 +84,7 @@ const Skills = forwardRef((props, ref) => {
               <li><img className='img' src={REACT} alt='REACT'/></li>
               <li><img className='img' src={REDUX} alt='REDUX'/></li>
               <li><img className='img' src={NEXTJS} alt='NEXTJS'/></li>
+              <li><img className='long' src={TAILWIND} alt='TAILWIND'/></li>
             </ul>  
           </div>
           <div>
@@ -120,6 +121,7 @@ const Skills = forwardRef((props, ref) => {
               <li><img className='img' src={CPP} alt='C++'/></li>
               <li><img className='long' src={PYTHON} alt='PYTHON'/></li>
               <li><img className='long' src={JAVA} alt='JAVA'/></li>
+              <li><img className='long' src={NGINX} alt='NGINX'/></li>
             </ul>
           </div>
         </div>
