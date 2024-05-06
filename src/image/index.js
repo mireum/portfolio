@@ -1,3 +1,4 @@
+export const img0 = require('./project0.png');
 export const img1 = require('./project1.png');
 export const img2 = require('./project2.png');
 export const img3 = require('./project3.png');

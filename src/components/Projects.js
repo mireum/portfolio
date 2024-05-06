@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { img1, img2, img3 } from "../image/index";
+import { img0, img1, img2, img3 } from "../image/index";
 
 const ProjectsContainer = styled.article`
   background-color: aliceblue;
@@ -61,12 +61,25 @@ const Projects = forwardRef((props, ref) => {
         <h3>Projects</h3>
           <ContentBox>
             <div className='divBox'>
+              <h4>그날그날</h4>
+              <img src={img0} alt='project0_img'/>
+              <div className='pBox'>
+                <p>사용자의 위치를 기반으로 그 지역의 날씨와 미세먼지를 보여주고 전국의 기온을 알 수 있는 웹입니다.</p>
+                <p>next-auth를 사용하여 naver로 로그인할 수 있습니다.</p>
+                <p>🔧Next.js를 이용하였습니다!</p>
+                <hr/>
+                <p>◾GitHub  <a href='https://github.com/mireum/weather-app'>github.com/mireum/weather-app</a></p>
+              </div>
+            </div>
+          </ContentBox>
+          <ContentBox>
+            <div className='divBox'>
               <h4>문화생활력소</h4>
               <img src={img2} alt='project2_img'/>
               <div className='pBox'>
                 <p>전국의 축제와 전시회를 한 눈에 찾아보고 필요하다면 예약도 할 수 있는 웹입니다.</p>
                 <p>주요 기능으로는 원하는 축제를 카테고리에 따라 찾아보고 상세 정보(위치, 웹페이지) 등과 예약을 할 수 있습니다.</p>
-                <p>React, Node, Express, MongoDB, AWS S3를 이용하였습니다.</p>
+                <p>🔧React, Node, Express, MongoDB, AWS S3를 이용하였습니다.</p>
                 <p>✔이 프로젝트는 혼자 공부하여 웹호스팅 사이트를 이용하지 않고 AWS를 사용해 배포하였습니다! </p>
                 <p>❗실 서비스 중은 아닙니다.</p>
                 <hr/>
@@ -82,7 +95,7 @@ const Projects = forwardRef((props, ref) => {
               <div className='pBox'>
                 <p>초보 견주들이 강아지를 올바르게 키울 수 있도록 맞춤 서비스를 제공하고, 같은 고민을 하는 사람들을 위한 웹입니다.</p>
                 <p>주요 기능으로는 자신의 강아지 기입 시 그에 맞는 사료와 물품이 추천됩니다.</p>
-                <p>React, Node, Express, MongoDB, AWS S3를 이용하였습니다.</p>
+                <p>🔧React, Node, Express, MongoDB, AWS S3를 이용하였습니다.</p>
                 <p>❗실 서비스 중은 아닙니다.</p>
                 <hr/>
                 <p>◾URL  <a href='https://mymung.netlify.app/'>mymung.netlify.app/</a></p>
