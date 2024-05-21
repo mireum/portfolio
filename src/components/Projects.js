@@ -65,8 +65,8 @@ const Projects = forwardRef((props, ref) => {
               <img src={img0} alt='project0_img'/>
               <div className='pBox'>
                 <p>사용자의 위치를 기반으로 그 지역의 날씨와 미세먼지를 보여주고 전국의 기온을 알 수 있는 웹입니다.</p>
-                <p>next-auth를 사용하여 naver로 로그인할 수 있습니다.</p>
-                <p>🔧Next.js를 이용하였습니다!</p>
+                <p>next-auth를 사용하여 Naver로 로그인할 수 있습니다.</p>
+                <p>🔧Next.js를 배우고 연습하기 위해 만들었습니다.</p>
                 <hr/>
                 <p>◾GitHub  <a href='https://github.com/mireum/weather-app'>github.com/mireum/weather-app</a></p>
               </div>
