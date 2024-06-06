@@ -99,7 +99,7 @@ const Projects = forwardRef((props, ref) => {
                 <p>❗실 서비스 중은 아닙니다.</p>
                 <hr/>
                 <p>◾URL  <a href='https://mymung.netlify.app/'>mymung.netlify.app/</a></p>
-                <p>◾GitHub  <a href='https://github.com/mireum/finalProject'>github.com/mireum/event-project</a></p>
+                <p>◾GitHub  <a href='https://github.com/mireum/finalProject'>github.com/mireum/finalProject</a></p>
               </div>
             </div>
           </ContentBox>
