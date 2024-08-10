@@ -23,3 +23,5 @@ export const PYTHON = require('./Python-Logo.png');
 export const JAVA = require('./Java-Logo.png');
 export const TAILWIND = require('./Tailwind.png');
 export const NGINX = require('./Nginx.png');
+export const TYPESCRIPT = require('./typescript.png');
+export const MYSQL = require('./mysql.png');

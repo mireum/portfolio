@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import HTML from '../image/HTML';
-import { NGINX, AWS, C, CLOUDTYPE, CPP, CSS, EXPRESSJS, FIGMA, GITHUB, JAVA, JS, MONGODB, MONGOOSE, NETLIFY, NEXTJS, NODEJS, PYTHON, REACT, REDUX, TAILWIND, TRELLO } from '../image';
+import { NGINX, AWS, C, CLOUDTYPE, CPP, CSS, EXPRESSJS, FIGMA, GITHUB, JAVA, JS, MONGODB, MONGOOSE, NETLIFY, NEXTJS, NODEJS, PYTHON, REACT, REDUX, TAILWIND, TRELLO, TYPESCRIPT, MYSQL } from '../image';
 import SASS from '../image/SASS';
 
 const SkillBox = styled.article`
@@ -82,16 +82,18 @@ const Skills = forwardRef((props, ref) => {
               <li><img className='img' src={JS} alt='JS'/></li>
               <li><SASS className='img' /></li>
               <li><img className='img' src={REACT} alt='REACT'/></li>
+              <li><img className='img' src={TYPESCRIPT} alt='TYPESCRIPT'/></li>
               <li><img className='img' src={REDUX} alt='REDUX'/></li>
               <li><img className='img' src={NEXTJS} alt='NEXTJS'/></li>
               <li><img className='long' src={TAILWIND} alt='TAILWIND'/></li>
             </ul>  
           </div>
           <div>
-            <h4>Backend</h4>
+            <h4>Backend + Database</h4>
             <ul>
               <li><img className='long' src={NODEJS} alt='NODEJS'/></li>
               <li><img className='img' src={EXPRESSJS} alt='EXPRESSJS'/></li>
+              <li><img className='img' src={MYSQL} alt='MYSQL'/></li>
               <li><img className='img' src={MONGODB} alt='MONGODB'/></li>
               <li><img className='long' src={MONGOOSE} alt='MONGOOSE'/></li>
             </ul>
