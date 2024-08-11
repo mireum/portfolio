@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { img0, img1, img2, img3 } from "../image/index";
+import { img0, img1, img2, img3, img5 } from "../image/index";
 
 const ProjectsContainer = styled.article`
   background-color: aliceblue;
@@ -61,6 +61,20 @@ const Projects = forwardRef((props, ref) => {
         <h3>Projects</h3>
           <ContentBox>
             <div className='divBox'>
+              <h4>주식쿨</h4>
+              <img src={img5} alt='project5_img'/>
+              <div className='pBox'>
+                <p>간단하게 주식을 사고 팔 수 있는 모의주식 웹입니다.</p>
+                <p>주식의 현 시세를 보고 시장가 또는 지정가로 구매하고 매매할 수 있습니다.</p>
+                <p>🔧Typescript와 mysql을 숙달하기 위해 만들었습니다.</p>
+                <hr/>
+                <p>◾GitHub(Frontend)  <a href='https://github.com/mireum/stock-front'>github.com/mireum/stock-front</a></p>
+                <p>◾GitHub(Backend)  <a href='https://github.com/mireum/stock-back'>github.com/mireum/stock-back</a></p>
+              </div>
+            </div>
+          </ContentBox>
+          <ContentBox>
+            <div className='divBox'>
               <h4>그날그날</h4>
               <img src={img0} alt='project0_img'/>
               <div className='pBox'>
@@ -84,7 +98,8 @@ const Projects = forwardRef((props, ref) => {
                 <p>❗실 서비스 중은 아닙니다.</p>
                 <hr/>
                 <p>◾URL  <a href='https://event.devcjw.com/'>event.devcjw.com/</a></p>
-                <p>◾GitHub  <a href='https://github.com/mireum/event-project'>github.com/mireum/event-project</a></p>
+                <p>◾GitHub(Frontend)  <a href='github.com/mireum/event-project'>github.com/mireum/event-project</a></p>
+                <p>◾GitHub(Backend)  <a href='https://github.com/mireum/event-project-server'>github.com/mireum/event-project-server</a></p>
               </div>
             </div>
           </ContentBox>
