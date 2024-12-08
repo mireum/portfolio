@@ -2,7 +2,6 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import HTML from '../image/HTML';
 import { NGINX, VUE, AWS, C, CLOUDTYPE, CPP, CSS, EXPRESSJS, FIGMA, GITHUB, JAVA, JS, MONGODB, MONGOOSE, NETLIFY, NEXTJS, NODEJS, PYTHON, REACT, REDUX, TAILWIND, TRELLO, TYPESCRIPT, MYSQL } from '../image';
-import SASS from '../image/SASS';
 
 const SkillBox = styled.article`
   background-color: bisque;
