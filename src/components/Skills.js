@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import HTML from '../image/HTML';
-import { NGINX, AWS, C, CLOUDTYPE, CPP, CSS, EXPRESSJS, FIGMA, GITHUB, JAVA, JS, MONGODB, MONGOOSE, NETLIFY, NEXTJS, NODEJS, PYTHON, REACT, REDUX, TAILWIND, TRELLO, TYPESCRIPT, MYSQL } from '../image';
+import { NGINX, VUE, AWS, C, CLOUDTYPE, CPP, CSS, EXPRESSJS, FIGMA, GITHUB, JAVA, JS, MONGODB, MONGOOSE, NETLIFY, NEXTJS, NODEJS, PYTHON, REACT, REDUX, TAILWIND, TRELLO, TYPESCRIPT, MYSQL } from '../image';
 import SASS from '../image/SASS';
 
 const SkillBox = styled.article`
@@ -80,7 +80,7 @@ const Skills = forwardRef((props, ref) => {
               <li><HTML className='img' /></li>
               <li><img className='img' style={{width:70}} src={CSS} alt='CSS'/></li>
               <li><img className='img' src={JS} alt='JS'/></li>
-              <li><SASS className='img' /></li>
+              <li><img className='img' src={VUE} alt='VUE'/></li>
               <li><img className='img' src={REACT} alt='REACT'/></li>
               <li><img className='img' src={TYPESCRIPT} alt='TYPESCRIPT'/></li>
               <li><img className='img' src={REDUX} alt='REDUX'/></li>

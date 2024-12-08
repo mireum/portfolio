@@ -26,3 +26,4 @@ export const NGINX = require('./Nginx.png');
 export const TYPESCRIPT = require('./typescript.png');
 export const MYSQL = require('./mysql.png');
 export const img5 = require('./img5.png');
+export const VUE = require('./vue.png');
